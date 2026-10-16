@@ -265,6 +265,81 @@ h1,h2,h3,blockquote,.brand,.amount,.big-index,.step-num,.issue-num{font-family:G
  .form-card{padding:21px}
  footer{padding-bottom:100px}
 }
+
+/* Premium editorial redesign — mobile first, separate review branch */
+:root{--bg:#f7f3ec;--paper:#fffefa;--bg-soft:#e9e9df;--ink:#202b26;--ink-soft:#536057;--dark:#233c32;--accent:#9b6b50;--line:#dcdad0;--content:1240px}
+body{background:var(--bg);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:-.008em}
+h1,h2,h3,blockquote,.brand,.amount,.step-num,.issue-num{font-family:Georgia,"Times New Roman",serif}
+h1,h2{letter-spacing:-.055em}
+h1{font-size:clamp(58px,7.5vw,112px)}
+h2{font-size:clamp(41px,5.1vw,76px)}
+.eyebrow{letter-spacing:.18em;font-size:10px}
+.top{min-height:94px}
+.brand{font-size:27px}
+.hero{padding:62px 0 105px}
+.hero-grid{grid-template-columns:1fr .87fr;gap:7%}
+.hero-copy .lead{font-size:clamp(18px,1.65vw,21px);max-width:500px}
+.hero h1{line-height:1.015}
+.btn{border-radius:100px;min-height:54px;padding:14px 28px}
+.hero .btn{background:#233c32}
+.underlink{border-bottom-color:#b29b89}
+.portrait{height:min(680px,52vw);margin-right:0;border-radius:180px 180px 6px 6px;overflow:hidden;box-shadow:none;background:#d7d0c5}
+.portrait img{object-position:center 20%;filter:saturate(.92)}
+.portrait:after{background:linear-gradient(0deg,#1b332d48,transparent 48%)}
+.portrait-note{right:22px;bottom:22px;background:#f7f3eced;max-width:185px;width:auto;padding:17px 19px;font:21px/1.2 Georgia,serif;border-radius:2px}
+.side-note{display:none}
+.stats{margin-top:48px}
+.ribbon{background:#233c32}
+.ribbon-inner{font-size:17px}
+section{padding:112px 0}
+.big-index{font-size:82px;color:#c5c9b9}
+.quote{background:#e9e9df}
+.quote blockquote{font-size:clamp(38px,5.3vw,69px)}
+.room,.about-photo{border-radius:180px 180px 3px 3px;overflow:hidden}
+.card{border:1px solid var(--line);border-radius:12px;padding:34px;background:#f9f7f1;box-shadow:none}
+.card.dark{background:#233c32}
+.card h3{font-size:30px}
+.card .tag{margin-bottom:18px}
+.card-bottom a{font-weight:600}
+.about{background:#233c32}
+.booking{background:#eae7de}
+.form-card{border-radius:14px;box-shadow:0 22px 60px #20372c12}
+.field input,.field textarea{border-radius:8px}
+.format-choice{border-radius:8px}
+.max-contact{border-radius:12px}
+.mobile-cta{border-radius:100px}
+@media(max-width:850px){
+ .top{min-height:72px}
+ .hero{padding:30px 0 54px}
+ .hero-grid{grid-template-columns:1fr;gap:28px}
+ .hero-copy .lead{font-size:16px}
+ .hero h1{font-size:clamp(48px,10.8vw,78px);line-height:1.04}
+ .portrait{height:clamp(360px,112vw,540px);border-radius:160px 160px 5px 5px}
+ .portrait-note{right:14px;bottom:14px;font-size:18px}
+ section{padding:70px 0}
+ .room,.about-photo{border-radius:140px 140px 4px 4px}
+ .ribbon-inner{font-size:15px}
+ .stats{margin-top:28px}
+ .intro-grid{display:block}
+ .big-index{display:none}
+ .issues{margin-top:24px}
+ .mobile-cta{bottom:max(12px,env(safe-area-inset-bottom))}
+}
+@media(max-width:480px){
+ .wrap{width:calc(100% - 40px)}
+ .hero h1{font-size:clamp(43px,11.4vw,56px);letter-spacing:-.05em}
+ h2{font-size:clamp(35px,9.3vw,46px)}
+ .hero .actions .btn{width:100%}
+ .portrait{height:clamp(360px,112vw,480px);border-radius:140px 140px 5px 5px}
+ .portrait-note{font-size:16px;max-width:155px}
+ .card{padding:25px}
+ .room,.about-photo{height:390px}
+ .stats{gap:10px}
+ .stats b{font-size:12px}
+ .quote blockquote{font-size:clamp(32px,8.7vw,42px)}
+ .ribbon-inner span:nth-of-type(n+2),.ribbon-inner i{display:none}
+ .ribbon-inner{white-space:normal;text-align:center}
+}
 </style>
 </head>
 <body>
