@@ -340,6 +340,46 @@ section{padding:112px 0}
  .ribbon-inner span:nth-of-type(n+2),.ribbon-inner i{display:none}
  .ribbon-inner{white-space:normal;text-align:center}
 }
+
+/* Responsive QA pass: avoid clipping, improve small-screen reading and interaction */
+@media (min-width:851px) and (max-width:1100px){
+ .hero-grid{gap:4%;grid-template-columns:minmax(0,1fr) minmax(0,.86fr)}
+ .hero h1{font-size:clamp(53px,6.1vw,75px)}
+ .portrait{height:clamp(490px,57vw,600px)}
+ .hero{padding-block:48px 76px}
+ section{padding-block:86px}
+}
+@media (max-width:850px){
+ .hero-grid{grid-template-columns:minmax(0,1fr)}
+ .hero-copy,.portrait,.form-card,.booking-grid>*,.about-grid>*,.how-grid>*{min-width:0}
+ .portrait{width:100%;margin:0;max-width:620px}
+ .portrait-note{right:14px;bottom:14px}
+ .hero{padding-top:24px}
+ .stats{flex-wrap:wrap}
+ .mobile-cta{padding-inline:22px;max-width:460px;margin-inline:auto}
+ body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+ footer{padding-bottom:36px}
+}
+@media(max-width:480px){
+ .hero h1{font-size:clamp(41px,10.5vw,54px);overflow-wrap:normal}
+ .portrait{height:clamp(340px,106vw,480px)}
+ .portrait-note{max-width:148px;padding:12px;font-size:16px}
+ .actions,.form-card .btn{max-width:100%}
+ .form-card .btn{white-space:normal}
+ .stats{gap:10px}
+ .stats div{min-width:0}
+ .card,.form-card{overflow-wrap:anywhere}
+ .max-number{font-size:clamp(15px,4.3vw,18px)}
+}
+@media (max-width:360px){
+ .wrap{width:calc(100% - 30px)}
+ .hero h1{font-size:40px}
+ .portrait-note{max-width:135px;font-size:15px}
+ .format-choice{min-height:60px}
+}
+@media(prefers-reduced-motion:reduce){
+ .portrait img,.card,.btn{transition:none!important}
+}
 </style>
 </head>
 <body>
@@ -357,7 +397,7 @@ section{padding:112px 0}
     <div class="actions"><a class="btn" href="#booking">Обсудить первую встречу <span aria-hidden="true">↗</span></a><a class="underlink" href="#process">Как проходит работа ↓</a></div>
     <div class="stats"><div><b>45 минут</b>первая встреча</div><div><b>Онлайн</b>из удобного места</div><div><b>Без оценок</b>бережный диалог</div></div>
   </div>
-  <div class="portrait"><img src="images/photo-1.webp" alt="Портрет Дарьи Каплан" fetchpriority="high"><div class="portrait-note">Внимание к вам.<br>В вашем темпе.<small>ДАРЬЯ КАПЛАН · ПСИХОЛОГ</small></div><div class="side-note" aria-hidden="true">пространство для честного разговора</div></div>
+  <div class="portrait"><img src="images/photo-1.webp" alt="Иллюстративный портрет на сайте Дарьи Каплан" fetchpriority="high" decoding="async"><div class="portrait-note">Внимание к вам.<br>В вашем темпе.<small>ДАРЬЯ КАПЛАН · ПСИХОЛОГ</small></div><div class="side-note" aria-hidden="true">пространство для честного разговора</div></div>
 </div></section>
 <div class="ribbon"><div class="wrap ribbon-inner"><span>Без необходимости казаться сильнее</span><i aria-hidden="true">✳</i><span>Без правильных ответов</span><i aria-hidden="true">✳</i><span>С вниманием к вашему опыту</span></div></div>
 <section class="paper" id="approach"><div class="wrap intro-grid"><div><div class="eyebrow">С чем можно прийти</div><div class="big-index" aria-hidden="true">01</div></div><div class="section-lead"><h2>Когда внутри слишком много всего.</h2><p class="lead">Иногда сложно даже сформулировать, что именно не так. Необязательно приходить с готовым запросом. Можно начать с того, что беспокоит именно сейчас.</p>
