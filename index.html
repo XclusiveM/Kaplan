@@ -3,13 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f3eee6">
+<meta name="theme-color" content="#f7f3ec">
 <meta name="description" content="Онлайн-консультации психолога Дарьи Каплан для взрослых, индивидуально и для пар/семей. Спокойный разговор без давления и готовых ответов.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Дарья Каплан — психолог онлайн">
 <meta property="og:description" content="Можно начать с того, что беспокоит именно сейчас. Индивидуальные и семейные консультации онлайн.">
 <meta property="og:image" content="images/photo-1.webp">
 <meta name="color-scheme" content="light">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:locale" content="ru_RU">
+<meta name="format-detection" content="telephone=no">
 <title>Дарья Каплан — психолог онлайн</title>
 <style>
 :root{
@@ -380,6 +383,59 @@ section{padding:112px 0}
 @media(prefers-reduced-motion:reduce){
  .portrait img,.card,.btn{transition:none!important}
 }
+
+/* Final design-system and usability polish */
+:root{--radius:10px}
+html{scroll-padding-top:28px}
+body{font-feature-settings:"kern";text-rendering:optimizeLegibility}
+p{overflow-wrap:break-word}
+.hero h1{max-width:12ch;text-wrap:balance}
+.hero .lead{max-width:48ch}
+.section-lead h2,.price-heading h2,.about h2,.booking h2{max-width:15ch;text-wrap:balance}
+.top{position:relative;z-index:2}
+.toplink{font-weight:650}
+.card{position:relative}
+.card:focus-within{border-color:var(--dark)}
+.card-bottom a:hover,.toplink:hover{color:var(--accent)}
+.faq-list summary{scroll-margin-top:24px}
+.faq-list summary:hover{color:var(--dark)}
+.form-card input:focus-visible,.form-card textarea:focus-visible{outline-offset:2px}
+.form-card [aria-invalid="true"]{border-color:#a44135}
+.form-card .error:not([hidden]){display:block}
+.message-preview{line-height:1.65;border-radius:8px}
+@media(min-width:851px){
+ .hero-copy{min-width:0}
+ .portrait{min-width:0}
+ .hero h1{font-size:clamp(55px,6.9vw,104px)}
+ .hero-grid{gap:5%}
+ .hero{padding-bottom:88px}
+}
+@media(max-width:850px){
+ .hero h1{max-width:100%}
+ .top{gap:12px}
+ .toplink{white-space:nowrap}
+ .brand{font-size:clamp(21px,5.3vw,27px)}
+ .brand small{font-size:9px;letter-spacing:.08em}
+ .hero-copy .lead{max-width:55ch}
+ .portrait{margin-inline:auto}
+ .card{min-height:0}
+ .faq-grid,.booking-grid{gap:24px}
+ .booking-grid>*,.faq-grid>*{min-width:0}
+ .mobile-cta{z-index:40}
+}
+@media(max-width:480px){
+ .top{min-height:76px}
+ .toplink{font-size:12px}
+ .hero h1{font-size:clamp(40px,10.7vw,53px)}
+ .hero .actions .btn{font-size:13px}
+ .portrait{height:clamp(340px,108vw,480px)}
+ .portrait-note{background:#f7f3ecf2;backdrop-filter:none}
+ .card{padding:25px 23px}
+ .faq-list summary{font-size:19px}
+ .form-card{padding:22px 19px}
+ .mobile-cta{left:12px;right:12px;width:calc(100% - 24px);max-width:460px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -435,9 +491,9 @@ section{padding:112px 0}
 </div></div>
 <form class="form-card" id="bookingForm" novalidate>
 <h3>Давайте познакомимся</h3><p>Заполните короткую анкету: подготовим текст, который можно скопировать и отправить лично в Telegram. Ничего не отправляется автоматически.</p>
-<div class="field"><label>Формат консультации</label><div class="format-choices" role="group" aria-label="Выберите формат консультации"><button type="button" class="format-choice" data-format="Первая индивидуальная · 45 минут · 1 500 ₽" aria-pressed="true">Первая индивидуальная<br>45 мин · 1 500 ₽</button><button type="button" class="format-choice" data-format="Индивидуальная · 60 минут · от 2 500 ₽" aria-pressed="false">Индивидуальная<br>60 мин · от 2 500 ₽</button><button type="button" class="format-choice" data-format="Первая семейная · 45 минут · 2 000 ₽" aria-pressed="false">Первая семейная<br>45 мин · 2 000 ₽</button><button type="button" class="format-choice" data-format="Семейная · 60 минут · от 3 000 ₽" aria-pressed="false">Семейная<br>60 мин · от 3 000 ₽</button></div></div><div class="field"><label for="name">Как к вам обращаться</label><input id="name" name="name" autocomplete="name" placeholder="Ваше имя" required aria-describedby="nameError"><span class="error" id="nameError" hidden></span></div>
+<div class="field"><label>Формат консультации</label><div class="format-choices" role="group" aria-label="Выберите формат консультации"><button type="button" class="format-choice" data-format="Первая индивидуальная · 45 минут · 1 500 ₽" aria-pressed="true">Первая индивидуальная<br>45 мин · 1 500 ₽</button><button type="button" class="format-choice" data-format="Индивидуальная · 60 минут · от 2 500 ₽" aria-pressed="false">Индивидуальная<br>60 мин · от 2 500 ₽</button><button type="button" class="format-choice" data-format="Первая семейная · 45 минут · 2 000 ₽" aria-pressed="false">Первая семейная<br>45 мин · 2 000 ₽</button><button type="button" class="format-choice" data-format="Семейная · 60 минут · от 3 000 ₽" aria-pressed="false">Семейная<br>60 мин · от 3 000 ₽</button></div></div><div class="field"><label for="name">Как к вам обращаться</label><input maxlength="100" id="name" name="name" autocomplete="name" placeholder="Ваше имя" required aria-describedby="nameError"><span class="error" id="nameError" hidden></span></div>
 <div class="field"><label for="contact">Телефон или ник в мессенджере</label><input id="contact" name="contact" autocomplete="tel" inputmode="tel" placeholder="+7 (___) ___-__-__ или @username" required aria-describedby="contactError"><span class="error" id="contactError" hidden></span></div>
-<div class="field"><label for="message">Что хотели бы обсудить? Необязательно</label><textarea id="message" name="message" placeholder="Можно в двух словах"></textarea></div>
+<div class="field"><label for="message">Что хотели бы обсудить? Необязательно</label><textarea maxlength="1500" id="message" name="message" placeholder="Можно в двух словах"></textarea></div>
 <label class="consent"><input type="checkbox" id="agree" name="agree" required aria-describedby="agreeError"><span>Мне есть 18 лет. Я ознакомился(ась) с <a href="policy.html" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a> и даю <a href="consent.html" target="_blank" rel="noopener noreferrer">согласие на обработку персональных данных</a>.</span></label>
 <span class="error" id="agreeError" hidden></span>
 <button class="btn" type="submit" id="submitButton">Подготовить сообщение ↗</button>
@@ -489,7 +545,7 @@ section{padding:112px 0}
   }
   contactInput.addEventListener('input',function(){
     const v=this.value.trim();
-    if(v.startsWith('+')||/^[789\d(\s-]/.test(v)){
+    if(v.startsWith('+')||/^[789(]/.test(v)){
       const formatted=formatRussianPhone(v);
       if(formatted!==v) this.value=formatted;
     }
@@ -501,13 +557,14 @@ section{padding:112px 0}
   function validContact(v){
     if(/^@[a-zA-Z0-9_]{5,32}$/.test(v)) return true;
     if(/^https?:\/\//i.test(v)) return false;
+    if(!/^[+\d\s()\-]+$/.test(v)) return false;
     const d=digits(v);
     return (d.length===11&&(d[0]==='7'||d[0]==='8'))||(d.length===10&&d[0]==='9');
   }
   form.addEventListener('submit',function(e){
     e.preventDefault();
     if(submitting) return;
-    const name=nameInput.value.trim();
+    const name=nameInput.value.trim().slice(0,100);
     const contact=contactInput.value.trim();
     let valid=true;
     setError(nameInput,errors.name,name?'':'Укажите, как к вам обращаться.');
@@ -522,7 +579,7 @@ section{padding:112px 0}
       status.style.display='none';
       return;
     }
-    const body=['Здравствуйте, Дарья! Хочу записаться на консультацию.','Формат: '+selectedFormat,'Имя: '+name,'Контакт: '+contact,messageInput.value.trim()?'Краткий запрос: '+messageInput.value.trim():''].filter(Boolean).join(String.fromCharCode(10));
+    const body=['Здравствуйте, Дарья! Хочу записаться на консультацию.','Формат: '+selectedFormat,'Имя: '+name,'Контакт: '+contact,messageInput.value.trim()?'Краткий запрос: '+messageInput.value.trim().slice(0,1500):''].filter(Boolean).join(String.fromCharCode(10));
     status.style.display='block';
     status.replaceChildren();
     const label=document.createElement('strong');label.textContent='Сообщение готово. Оно ещё не отправлено.';
