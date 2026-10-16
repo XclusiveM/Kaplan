@@ -407,7 +407,7 @@ h1,h2,h3,blockquote,.brand,.amount,.big-index,.step-num,.issue-num{font-family:G
       status.style.display='none';
       return;
     }
-    const body='Здравствуйте, Дарья! Хочу записаться на консультацию.\\nФормат: '+selectedFormat+'\\nИмя: '+name+'\\nКонтакт: '+contact+(messageInput.value.trim()?'\\nКраткий запрос: '+messageInput.value.trim():'');
+    const body=['Здравствуйте, Дарья! Хочу записаться на консультацию.','Формат: '+selectedFormat,'Имя: '+name,'Контакт: '+contact,messageInput.value.trim()?'Краткий запрос: '+messageInput.value.trim():''].filter(Boolean).join(String.fromCharCode(10));
     status.style.display='block';
     status.replaceChildren();
     const label=document.createElement('strong');label.textContent='Сообщение готово. Оно ещё не отправлено.';
