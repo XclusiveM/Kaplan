@@ -165,6 +165,27 @@ form input:focus,form textarea:focus{border-color:var(--accent);outline:none}
 .form-done{display:none;padding:30px;background:var(--bg-soft);border-radius:8px;font-size:16.5px;line-height:1.6}
 .form-done.show{display:block}
 
+/* contact badges */
+.badges{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.badges-col{flex-direction:column;align-items:stretch}
+.badge{display:flex;align-items:center;gap:14px;padding:10px 20px 10px 10px;border-radius:999px;background:var(--paper);border:1px solid var(--line-strong);color:var(--ink);transition:border-color .2s ease,transform .2s ease}
+.badge:hover{border-color:var(--accent);transform:translateY(-1px)}
+.badge .ic{width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.badge .ic svg{width:19px;height:19px}
+.badge b{display:block;font-family:'Golos Text',sans-serif;font-weight:600;font-size:15.5px;line-height:1.2}
+.badge small{display:block;color:var(--soft);font-size:13px;line-height:1.3;margin-top:2px}
+.hero .badges{margin-top:34px}
+.hero .badge{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:#fff;backdrop-filter:blur(6px)}
+.hero .badge small{color:#CFC6BE}
+.hero .badge:hover{border-color:#fff}
+.book .badge .ic{background:var(--accent)}
+footer.site .badge{background:rgba(248,245,241,.06);border-color:var(--line-dark);color:#EDE6E1}
+footer.site .badge small{color:#A8A29E}
+footer.site .badge:hover{border-color:var(--accent)}
+.foot-badges{margin-top:0;margin-bottom:32px}
+.foot-badges .badge{padding:8px 18px 8px 8px}
+.foot-badges .badge .ic{width:34px;height:34px}
+
 /* footer */
 footer.site{background:var(--dark);color:#A8A29E;padding:56px 0;font-size:14.5px}
 footer.site a{text-decoration:underline}
@@ -206,6 +227,7 @@ footer.site p{margin-bottom:13px;max-width:76ch}
       <a href="#book" class="btn">Записаться на консультацию</a>
       <a href="#how" class="btn-line">Как проходит консультация</a>
     </div>
+    <div class="badges"><a class="badge" href="https://t.me/psyholog_kaplan"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.6 20c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13.1l-4.8-1.5c-1-.3-1.1-1 .2-1.5l18.9-7.3c.9-.3 1.7.2 1.4 1.5z"/></svg></span><span><b>Telegram</b><small>группа</small></span></a><a class="badge" href="tel:+79687617064"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V6.5c0-.5.6-.8 1-.4l7 8 7-8c.4-.4 1-.1 1 .4V19" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>MAX</b><small>по номеру</small></span></a><a class="badge" href="tel:+79687617064"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><b>Телефон</b><small>+7 968 761-70-64</small></span></a></div>
     <div class="proofs">
       <div>Клиентоцентрированный подход<span>КПТ и эмоционально-фокусированная терапия</span></div>
       <div>Профессиональная переподготовка<span>психологическое консультирование</span></div>
@@ -357,11 +379,7 @@ footer.site p{margin-bottom:13px;max-width:76ch}
     <div class="book-grid">
       <div>
         <p class="lead" style="margin-top:14px">Напишите удобным способом или оставьте номер — я отвечу в течение дня. Рассказывать о своей ситуации в первом сообщении не нужно.</p>
-        <ul class="channels">
-          <li><a href="tel:+79687617064">MAX <span>по номеру +7 968 761-70-64</span></a></li>
-          <li><a href="https://t.me/psyholog_kaplan">Telegram <span>Написать</span></a></li>
-          <li><a href="tel:+79687617064">+7 968 761-70-64 <span>Позвонить</span></a></li>
-        </ul>
+        <div class="badges badges-col"><a class="badge" href="https://t.me/psyholog_kaplan"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.6 20c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13.1l-4.8-1.5c-1-.3-1.1-1 .2-1.5l18.9-7.3c.9-.3 1.7.2 1.4 1.5z"/></svg></span><span><b>Telegram</b><small>группа, пишите здесь</small></span></a><a class="badge" href="tel:+79687617064"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V6.5c0-.5.6-.8 1-.4l7 8 7-8c.4-.4 1-.1 1 .4V19" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>MAX</b><small>написать по номеру +7 968 761-70-64</small></span></a><a class="badge" href="tel:+79687617064"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><b>Телефон</b><small>позвонить +7 968 761-70-64</small></span></a><a class="badge" href="https://vk.ru/club236982913"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.8 16.9c-5.5 0-8.9-3.8-9-10.1h2.8c.1 4.6 2.2 6.6 3.8 7V6.8h2.6v4c1.6-.2 3.3-2 3.9-4h2.6c-.5 2.5-2.2 4.3-3.4 5 1.2.6 3.2 2.2 4 5.1h-2.9c-.6-1.9-2.2-3.4-4.2-3.6v3.6z"/></svg></span><span><b>ВКонтакте</b><small>сообщество</small></span></a></div>
       </div>
       <div>
         <form id="bookForm" novalidate>
@@ -399,6 +417,7 @@ footer.site p{margin-bottom:13px;max-width:76ch}
 <!-- FOOTER -->
 <footer class="site">
   <div class="wrap">
+    <div class="badges foot-badges"><a class="badge" href="https://t.me/psyholog_kaplan"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.6 20c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13.1l-4.8-1.5c-1-.3-1.1-1 .2-1.5l18.9-7.3c.9-.3 1.7.2 1.4 1.5z"/></svg></span><span><b>Telegram</b><small>группа</small></span></a><a class="badge" href="https://vk.ru/club236982913"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.8 16.9c-5.5 0-8.9-3.8-9-10.1h2.8c.1 4.6 2.2 6.6 3.8 7V6.8h2.6v4c1.6-.2 3.3-2 3.9-4h2.6c-.5 2.5-2.2 4.3-3.4 5 1.2.6 3.2 2.2 4 5.1h-2.9c-.6-1.9-2.2-3.4-4.2-3.6v3.6z"/></svg></span><span><b>ВКонтакте</b><small>сообщество</small></span></a><a class="badge" href="tel:+79687617064"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V6.5c0-.5.6-.8 1-.4l7 8 7-8c.4-.4 1-.1 1 .4V19" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>MAX</b><small>по номеру</small></span></a><a class="badge" href="tel:+79687617064"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><b>Телефон</b><small>+7 968 761-70-64</small></span></a></div>
     <p>Каплан Дарья Владимировна. Плательщик налога на профессиональный доход (самозанятая), ИНН: [указать].</p>
     <p>Психологическое консультирование не является медицинской услугой. Психолог не ставит диагнозы, не назначает лечение и не заменяет помощь врача-психиатра или психотерапевта.</p>
     <p><a href="policy.html">Политика обработки персональных данных</a> &nbsp;·&nbsp; <a href="offer.html">Условия оказания услуг</a></p>
