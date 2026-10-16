@@ -9,13 +9,14 @@
 <meta property="og:title" content="Дарья Каплан — психолог онлайн">
 <meta property="og:description" content="Можно начать с того, что беспокоит именно сейчас. Индивидуальные и семейные консультации онлайн.">
 <meta property="og:image" content="images/photo-1.webp">
+<meta name="color-scheme" content="light">
 <title>Дарья Каплан — психолог онлайн</title>
 <style>
 :root{
   --bg:#f3eee6;--paper:#fffdf9;--bg-soft:#e7e7dc;--ink:#252c25;
   --ink-soft:#596158;--ink-muted:#73776e;--line:#d9d4ca;--line-strong:#b9b7aa;
   --dark:#304638;--line-dark:#647466;--accent:#a85f43;--serif:'Golos Text',Arial,sans-serif;
-  --sans:Arial,Helvetica,sans-serif;--radius:2px;--content:1180px;
+  --sans:Arial,Helvetica,sans-serif;--radius:6px;--content:1180px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
@@ -184,6 +185,34 @@ footer{background:#242c25;color:#e5e6df;padding:43px 0 55px}
   .contact-list span{max-width:58%}
 }
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* Editorial refinement: improved readability, rhythm and conversion */
+body{background-image:radial-gradient(ellipse at 8% 4%,#fff9ee 0,transparent 42%)}
+h1,h2,h3{overflow-wrap:break-word}
+.hero-copy .lead{font-size:clamp(17px,1.7vw,20px)}
+.hero .btn{min-height:56px;padding-inline:28px}
+.portrait{box-shadow:18px 18px 0 #e3e1d6}
+.portrait img{transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.portrait:hover img{transform:scale(1.025)}
+.card{transition:transform .25s,box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 18px 38px #202c2012}
+.contact-list a{transition:background .2s,padding .2s}
+.contact-list a:hover{padding-inline:12px;background:#e9e7dc}
+.max-contact{background:var(--dark);color:#fff;padding:23px 25px;margin:22px 0 18px}
+.max-contact strong{display:block;font:27px/1.25 var(--serif)}
+.max-contact p{color:#e4e9df;font-size:13px;line-height:1.6;margin:10px 0 18px}
+.max-contact .btn{background:#f6efe5;color:#25372b;border-color:#f6efe5;width:100%}
+.max-contact .btn:hover{background:#fff}
+.max-number{font-size:18px;font-weight:700;letter-spacing:.01em}
+.format-choices{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:14px 0}
+.format-choice{border:1px solid var(--line-strong);background:#fffdf9;color:var(--ink);padding:12px;text-align:left;font-size:12px;line-height:1.4;cursor:pointer;min-height:70px}
+.format-choice[aria-pressed="true"]{border:2px solid var(--dark);background:#e8ece3;font-weight:700}
+.format-choice:hover{border-color:var(--dark)}
+.message-preview{white-space:pre-wrap;overflow-wrap:anywhere;background:#f2eee7;border:1px solid var(--line);padding:15px;margin:14px 0;font-size:13px}
+.form-card .secondary-action{background:transparent;color:var(--dark);margin-top:9px;border:1px solid var(--dark)}
+.form-card .secondary-action:hover{background:#e7e7dc}
+@media(max-width:850px){.portrait{box-shadow:10px 10px 0 #e3e1d6}.max-contact{padding:21px}}
+@media(max-width:480px){.hero h1{font-size:clamp(42px,12vw,52px)}.format-choices{grid-template-columns:1fr}.portrait-note{right:-8px}.mobile-cta{bottom:max(12px,env(safe-area-inset-bottom))}}
 </style>
 </head>
 <body>
@@ -232,25 +261,25 @@ footer{background:#242c25;color:#e5e6df;padding:43px 0 55px}
 <details><summary>Как работают отмена и перенос?</summary><p>Пожалуйста, предупредите об отмене или переносе не позднее чем за 24 часа. Если обстоятельства изменились внезапно, напишите Дарье: дальнейшие действия обсуждаются индивидуально с учётом согласованных условий и требований закона.</p></details>
 <details><summary>Что делать, если нужна срочная помощь?</summary><p>Онлайн-консультирование не является экстренной службой. При непосредственной угрозе жизни или безопасности обратитесь в местную экстренную службу или ближайшее медицинское учреждение.</p></details>
 </div></div></section>
-<section class="booking" id="booking"><div class="wrap booking-grid"><div><div class="eyebrow">Следующий шаг</div><h2>Не обязательно ждать, пока станет совсем тяжело.</h2><p class="lead">Напишите, чтобы обсудить удобное время и формат встречи. Без обязательств и давления. Решение остаётся за вами.</p><a class="btn" href="https://t.me/psyholog_kaplan" target="_blank" rel="noopener noreferrer">Написать в Telegram ↗</a><div class="contact-list">
-<a href="https://t.me/psyholog_kaplan" target="_blank" rel="noopener noreferrer">Telegram <span>@psyholog_kaplan ↗</span></a>
+<section class="booking" id="booking"><div class="wrap booking-grid"><div><div class="eyebrow">Следующий шаг</div><h2>Не обязательно ждать, пока станет совсем тяжело.</h2><p class="lead">Напишите, чтобы обсудить удобное время и формат встречи. Без обязательств и давления. Решение остаётся за вами.</p><div class="max-contact"><strong>Удобнее в MAX?</strong><p>Это основной способ записи. Найдите Дарью в MAX по номеру телефона, скопируйте его одним нажатием.</p><div class="max-number">+7 968 761-70-64</div><button type="button" class="btn" id="copyMaxPhone">Скопировать номер для MAX ↗</button><p id="copyMaxStatus" role="status" aria-live="polite"></p></div><a class="underlink" href="https://t.me/mypsyholog_kaplan" target="_blank" rel="noopener noreferrer">Написать лично в Telegram ↗</a><div class="contact-list">
+<a href="https://t.me/mypsyholog_kaplan" target="_blank" rel="noopener noreferrer">Личный Telegram <span>@mypsyholog_kaplan ↗</span></a><a href="https://t.me/psyholog_kaplan" target="_blank" rel="noopener noreferrer">Telegram-канал <span>Публикации ↗</span></a>
 <a href="https://vk.ru/club236982913" target="_blank" rel="noopener noreferrer">ВКонтакте <span>Написать сообщение ↗</span></a>
-<a href="tel:+79687617064">Телефон / MAX <span>+7 968 761-70-64</span></a>
+<a href="tel:+79687617064">Позвонить <span>+7 968 761-70-64</span></a>
 </div></div>
 <form class="form-card" id="bookingForm" novalidate>
-<h3>Давайте познакомимся</h3><p>Форма подготовит сообщение для Telegram. Вы проверите его и отправите самостоятельно.</p>
-<div class="field"><label for="name">Как к вам обращаться</label><input id="name" name="name" autocomplete="name" placeholder="Ваше имя" required aria-describedby="nameError"><span class="error" id="nameError" hidden></span></div>
+<h3>Давайте познакомимся</h3><p>Заполните короткую анкету: подготовим текст, который можно скопировать и отправить лично в Telegram. Ничего не отправляется автоматически.</p>
+<div class="field"><label>Формат консультации</label><div class="format-choices" role="group" aria-label="Выберите формат консультации"><button type="button" class="format-choice" data-format="Первая индивидуальная · 45 минут · 1 500 ₽" aria-pressed="true">Первая индивидуальная<br>45 мин · 1 500 ₽</button><button type="button" class="format-choice" data-format="Индивидуальная · 60 минут · от 2 500 ₽" aria-pressed="false">Индивидуальная<br>60 мин · от 2 500 ₽</button><button type="button" class="format-choice" data-format="Первая семейная · 45 минут · 2 000 ₽" aria-pressed="false">Первая семейная<br>45 мин · 2 000 ₽</button><button type="button" class="format-choice" data-format="Семейная · 60 минут · от 3 000 ₽" aria-pressed="false">Семейная<br>60 мин · от 3 000 ₽</button></div></div><div class="field"><label for="name">Как к вам обращаться</label><input id="name" name="name" autocomplete="name" placeholder="Ваше имя" required aria-describedby="nameError"><span class="error" id="nameError" hidden></span></div>
 <div class="field"><label for="contact">Телефон или ник в мессенджере</label><input id="contact" name="contact" autocomplete="tel" inputmode="tel" placeholder="+7 (___) ___-__-__ или @username" required aria-describedby="contactError"><span class="error" id="contactError" hidden></span></div>
 <div class="field"><label for="message">Что хотели бы обсудить? Необязательно</label><textarea id="message" name="message" placeholder="Можно в двух словах"></textarea></div>
 <label class="consent"><input type="checkbox" id="agree" name="agree" required aria-describedby="agreeError"><span>Мне есть 18 лет. Я ознакомился(ась) с <a href="policy.html" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a> и даю <a href="consent.html" target="_blank" rel="noopener noreferrer">согласие на обработку персональных данных</a>.</span></label>
 <span class="error" id="agreeError" hidden></span>
 <button class="btn" type="submit" id="submitButton">Подготовить сообщение ↗</button>
-<p class="form-note">Сайт не отправляет и не сохраняет заполненные данные на сервере. Сообщение откроется в Telegram, а отправлять его или нет решаете вы. Не указывайте подробности, которыми пока не готовы делиться.</p>
+<p class="form-note">Сайт не отправляет и не сохраняет заполненные данные на сервере. Текст можно скопировать и самостоятельно отправить в личный Telegram Дарьи. Не указывайте подробности, которыми пока не готовы делиться.</p>
 <div class="status" id="formStatus" role="status" aria-live="polite"></div>
 </form></div></section>
 <section class="paper" aria-label="Важная информация"><div class="wrap"><div class="eyebrow">Важная информация</div><p class="form-note">Психологическое консультирование не является медицинской услугой. Дарья Каплан не ставит психиатрические диагнозы и не выписывает рецептурные препараты. Консультации не заменяют медицинскую помощь и не предназначены для экстренных или кризисных ситуаций. Сайт предназначен для совершеннолетних пользователей (18+).</p></div></section>
 </main>
-<footer><div class="wrap footer-row"><div><div class="footer-title">Каплан Дарья Владимировна</div><p class="footer-note">Плательщик налога на профессиональный доход (самозанятая). Психологическое консультирование онлайн.</p><div class="footer-legal">ИНН: <strong>[УКАЗАТЬ ИНН ДО ПУБЛИКАЦИИ]</strong><br>Телефон / MAX: +7 968 761-70-64 · Telegram: @psyholog_kaplan</div><p class="footer-note">Не медицинская услуга. Не является экстренной кризисной помощью.</p></div><div class="footer-links"><a href="policy.html">Политика обработки ПДн</a><a href="consent.html">Согласие на обработку ПДн</a><a href="offer.html">Условия оказания услуг</a><a href="#top">Наверх ↑</a></div></div></footer>
+<footer><div class="wrap footer-row"><div><div class="footer-title">Каплан Дарья Владимировна</div><p class="footer-note">Плательщик налога на профессиональный доход (самозанятая). Психологическое консультирование онлайн.</p><div class="footer-legal">ИНН: <strong>[УКАЗАТЬ ИНН ДО ПУБЛИКАЦИИ]</strong><br>MAX: +7 968 761-70-64 · Личный Telegram: @mypsyholog_kaplan · Канал: @psyholog_kaplan</div><p class="footer-note">Не медицинская услуга. Не является экстренной кризисной помощью.</p></div><div class="footer-links"><a href="policy.html">Политика обработки ПДн</a><a href="consent.html">Согласие на обработку ПДн</a><a href="offer.html">Условия оказания услуг</a><a href="#top">Наверх ↑</a></div></div></footer>
 <a class="btn mobile-cta" href="#booking">Обсудить первую встречу ↗</a>
 <script>
 (function(){
@@ -261,6 +290,11 @@ footer{background:#242c25;color:#e5e6df;padding:43px 0 55px}
   const agreeInput=document.getElementById('agree');
   const button=document.getElementById('submitButton');
   const status=document.getElementById('formStatus');
+  let selectedFormat='Первая индивидуальная · 45 минут · 1 500 ₽';
+  document.querySelectorAll('[data-format]').forEach(b=>b.addEventListener('click',()=>{selectedFormat=b.dataset.format;document.querySelectorAll('[data-format]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));}));
+  document.querySelectorAll('.card .card-bottom a').forEach((a,i)=>a.addEventListener('click',()=>{const b=document.querySelectorAll('[data-format]')[[0,1,2,3][i]];if(b)b.click();}));
+  const copyMax=document.getElementById('copyMaxPhone');
+  if(copyMax)copyMax.addEventListener('click',async()=>{try{await navigator.clipboard.writeText('+79687617064');document.getElementById('copyMaxStatus').textContent='Номер скопирован. Откройте MAX и найдите контакт по номеру.';}catch(e){document.getElementById('copyMaxStatus').textContent='Скопируйте номер вручную: +7 968 761-70-64';}});
   const errors={name:document.getElementById('nameError'),contact:document.getElementById('contactError'),agree:document.getElementById('agreeError')};
   let submitting=false;
 
@@ -321,25 +355,16 @@ footer{background:#242c25;color:#e5e6df;padding:43px 0 55px}
       status.style.display='none';
       return;
     }
-    submitting=true;
-    button.disabled=true;
-    button.textContent='Подготавливаем сообщение…';
+    const body='Здравствуйте, Дарья! Хочу записаться на консультацию.\\nФормат: '+selectedFormat+'\\nИмя: '+name+'\\nКонтакт: '+contact+(messageInput.value.trim()?'\\nКраткий запрос: '+messageInput.value.trim():'');
     status.style.display='block';
-    status.textContent='Готовим сообщение для Telegram…';
-    const body='Здравствуйте, Дарья! Меня зовут '+name+'. Мой контакт: '+contact+(messageInput.value.trim()?'\nХочу обсудить: '+messageInput.value.trim():'')+'\nПодскажите, пожалуйста, как можно записаться на консультацию.';
-    const url='https://t.me/psyholog_kaplan?text='+encodeURIComponent(body);
-    status.textContent='Сейчас откроется Telegram. Проверьте сообщение и отправьте его самостоятельно.';
-    const win=window.open(url,'_blank','noopener,noreferrer');
-    if(!win){
-      status.replaceChildren();
-      status.append('Если Telegram не открылся, ');
-      const link=document.createElement('a');
-      link.href=url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='откройте подготовленное сообщение вручную ↗';
-      status.append(link);
-    }
-    window.setTimeout(function(){
-      submitting=false;button.disabled=false;button.textContent='Подготовить сообщение ↗';
-    },1600);
+    status.replaceChildren();
+    const label=document.createElement('strong');label.textContent='Сообщение готово. Оно ещё не отправлено.';
+    const preview=document.createElement('div');preview.className='message-preview';preview.textContent=body;
+    const copy=document.createElement('button');copy.type='button';copy.className='btn';copy.textContent='Скопировать текст заявки';
+    copy.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(body);copy.textContent='Текст скопирован ✓';}catch(e){copy.textContent='Выделите и скопируйте текст выше';}});
+    const link=document.createElement('a');link.className='btn secondary-action';link.href='https://t.me/mypsyholog_kaplan';link.target='_blank';link.rel='noopener noreferrer';link.textContent='Открыть личный Telegram Дарьи ↗';
+    const help=document.createElement('p');help.className='form-note';help.textContent='Скопируйте текст, откройте личный чат и вставьте сообщение. Отправка произойдёт только после вашего действия в Telegram.';
+    status.append(label,preview,copy,link,help);
   });
 })();
 </script>
